@@ -24,12 +24,17 @@ Copyright (c) 2018. Scott Henshaw, Kibble Online Inc. All Rights Reserved.
                 This basic view is called a route edge or just a route.  This is the root edge.
                 </p><br/>
             </div>
+            <div>
+                <j-nickname>nick</j-nickname>
+            </div>
         </div>
     </section>
 
 </template>
 <script>
     import Controller from '@/mixins/controller'
+
+    import jNickname from '@/components/Nickname.vue';
 
     class AboutController extends Controller {
 
@@ -41,7 +46,7 @@ Copyright (c) 2018. Scott Henshaw, Kibble Online Inc. All Rights Reserved.
         }
     }
 
-    export default new AboutController('pgAbout');
+    export default new AboutController('pgAbout', { jNickname });
 
 </script>
 <style>
