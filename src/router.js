@@ -10,11 +10,13 @@ Vue.use( Router );
 
 import Home from '@/routes/Home.vue'
 import About from '@/routes/About.vue'
+import test from '@/routes/test.vue'
 
 
 export default new Router({
     routes: [
         { path:"/",     name:"About", component: About },
         { path:"/home", name:"Home", component: Home, props: { name: "DemoApp"} },
+        { path: "/test", name: "Test", component: test}
     ]
 });
