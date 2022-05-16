@@ -6,8 +6,7 @@
 <template>
 
     <section class="cell-style">  
-        <div>{{ title }}</div>
-        <div>
+        <div class="cell-text">
             <slot></slot>
         </div>
     </section>
@@ -15,8 +14,6 @@
 </template>
 <script>
     import Controller from '@/mixins/controller'
-
-    // import other components you use here...
 
     class BoardCellController extends Controller {
 

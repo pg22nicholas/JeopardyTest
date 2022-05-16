@@ -13,6 +13,7 @@ Copyright (c) 2018. Scott Henshaw, Kibble Online Inc. All Rights Reserved.
             </div>
 
             <buzz-button title="Bzzzt" />
+            <Board-Cell>100</Board-Cell>
 
         </div>
     </section>
@@ -22,6 +23,7 @@ Copyright (c) 2018. Scott Henshaw, Kibble Online Inc. All Rights Reserved.
     import Controller from '@/mixins/controller'
 
     import BuzzButton from '@/components/BuzzButton.vue'
+    import BoardCell from '@/components/BoardCell.vue'
 
     class TestController extends Controller {
 
@@ -33,7 +35,7 @@ Copyright (c) 2018. Scott Henshaw, Kibble Online Inc. All Rights Reserved.
         }
     }
 
-    export default new TestController('pgAbout', { BuzzButton });
+    export default new TestController('pgAbout', { BuzzButton, BoardCell });
 
 </script>
 <style>
