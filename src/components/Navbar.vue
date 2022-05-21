@@ -31,7 +31,8 @@ Copyright (c) 2018. Scott Henshaw, Kibble Online Inc. All Rights Reserved.
                 navMenu:[
                     { section: "Home" },
                     { section: "About" },
-                    { section: "Test" }
+                    { section: "Test" },
+                    { section: "Board" }
                 ]
             };
         }
