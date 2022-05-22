@@ -101,7 +101,6 @@
     .component-style {
         display: flex;
         flex-direction:row;
-        flex-wrap:wrap;
         justify-content:space-evenly;
         align-content: flex-start;
         align-items:flex-start;

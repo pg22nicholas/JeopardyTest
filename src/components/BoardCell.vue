@@ -29,16 +29,17 @@
 
     .cell-style {
         display: flex;
-        flex-direction:row;
-        flex-wrap:wrap;
-        justify-content:space-evenly;
-        align-content: flex-start;
-        align-items:flex-start;
+        align-items: center;
+        justify-content: center;
+        background-color: aqua;
+        width: fit-content;
+        height: 100px;
+        padding: 10px;
     }
 
     .cell-text {
         color: rgb(228, 241, 148);
-        font-size: 4.5em;
+        font-size: 3em;
         text-shadow: 2px 2px #777;
     }
 

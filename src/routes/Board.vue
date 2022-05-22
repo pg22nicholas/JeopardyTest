@@ -5,13 +5,16 @@ Copyright (c) 2018. Scott Henshaw, Kibble Online Inc. All Rights Reserved.
 <template>
 
     <section class="board-container">
-        <Board-Cell>100</Board-Cell>
+        <div class="board">
+            <Game-Board title="Game 1">100</Game-Board>
+        </div>
+        
     </section>
 
 </template>
 <script>
     import Controller from '@/mixins/controller'
-    import BoardCell from '@/components/BoardCell.vue'
+    import GameBoard from '@/components/GameBoard.vue'
 
     class BoardController extends Controller {
 
@@ -23,7 +26,7 @@ Copyright (c) 2018. Scott Henshaw, Kibble Online Inc. All Rights Reserved.
         }
     }
 
-    export default new BoardController('pgBoard', { BoardCell });
+    export default new BoardController('pgBoard', { GameBoard });
 
 </script>
 <style>
@@ -31,5 +34,15 @@ Copyright (c) 2018. Scott Henshaw, Kibble Online Inc. All Rights Reserved.
     .board-container {
         display: inline-block;
         width: 100%;
+        height: 100%;
+    }
+
+    .board {
+        margin:2vw;
+        border: 1px solid black;
+        background-color: lightgray;
+        color: black;
+        height: 78vh;
+        width: 80vw;
     }
 </style>
