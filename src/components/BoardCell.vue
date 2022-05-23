@@ -7,7 +7,9 @@
 
     <section class="cell-style">  
         <div class="cell-text">
-            <slot></slot>
+            <div v-if="!isHidden" v-on:click="isHidden = true">
+                <slot></slot>
+            </div>
         </div>
     </section>
 
@@ -19,6 +21,10 @@
 
         constructor( name, subComponentList = []) {
             super( name, subComponentList )
+
+            this.vm = {
+                isHidden: false,
+            }
         }
     }
 
@@ -33,6 +39,7 @@
         justify-content: center;
         background-color: aqua;
         width: fit-content;
+        min-width: 100px;
         height: 100px;
         padding: 10px;
     }
@@ -42,5 +49,9 @@
         font-size: 3em;
         text-shadow: 2px 2px #777;
     }
+
+    .hide {
+        visibility: hidden !important;
+}
 
 </style>

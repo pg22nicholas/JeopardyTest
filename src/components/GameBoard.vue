@@ -10,20 +10,20 @@
     <section>  <!-- Just one main element per template -->
         <div class="title">{{ title }}</div>
         <div class="board-container" >
+            
             <div v-for="header in headers" :key="header.title">
-                <Board-Cell>{{ header.title }}</Board-Cell>
-            </div> 
-        </div>
-        
-        <div v-for="row in numRows - 1" :key="row">
-            <div class="board-container">
-                <div v-for="col in numColumns" :key="col">
-                    <div @click="doIt($event)">
+                <div class="board-column">
+
+                    <!-- Cell header -->
+                    <Board-Cell>{{ header.title }}</Board-Cell>
+
+                    <!-- money cells -->
+                    <div v-for="row in numRows - 1" :key="row">
                         <Board-Cell>{{ row * 100 }}</Board-Cell>
                     </div>
-                </div>
-            </div>
-            
+
+                </div> 
+            </div> 
         </div>
     </section>
 
@@ -48,11 +48,6 @@
                 title: String
             }
         }
-
-        doIt( $event ) {
-            // A method that does something to the props or viewModel, or global state
-            console.log("do it")
-        }
     }
 
     export default new GameBoardController('GameBoardComponent', { BoardCell });
@@ -74,6 +69,13 @@
         font-size: 4.5em;
         height: fit-content;
         width: fit-content;
+    }
+
+    .board-column {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
     }
 
 </style>
