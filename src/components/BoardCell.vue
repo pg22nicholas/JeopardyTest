@@ -7,7 +7,7 @@
 
     <section class="cell-style">  
         <div class="cell-text">
-            <div v-if="!isHidden" v-on:click="isHidden = true">
+            <div v-if="!isHidden || isHeader" v-on:click="isHidden = true">
                 <slot></slot>
             </div>
         </div>
@@ -21,6 +21,10 @@
 
         constructor( name, subComponentList = []) {
             super( name, subComponentList )
+
+            this.props = {
+                isHeader : Boolean
+            }
 
             this.vm = {
                 isHidden: false,

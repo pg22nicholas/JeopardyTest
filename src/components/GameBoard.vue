@@ -15,11 +15,11 @@
                 <div class="board-column">
 
                     <!-- Cell header -->
-                    <Board-Cell>{{ header.title }}</Board-Cell>
+                    <Board-Cell :isHeader="true">{{ header.title }}</Board-Cell>
 
                     <!-- money cells -->
                     <div v-for="row in numRows - 1" :key="row">
-                        <Board-Cell>{{ row * 100 }}</Board-Cell>
+                        <Board-Cell :isHeader="false">{{ row * 100 }}</Board-Cell>
                     </div>
 
                 </div> 
